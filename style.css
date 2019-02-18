@@ -153,7 +153,6 @@ h1 {
     border-top-right-radius: 200px;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
-    
 }
 
 .scroll {
@@ -163,7 +162,8 @@ h1 {
 	animation-iteration-count: infinite;
 	transform-origin: 50% 20.5px;
 	will-change: transform, opacity;
-	opacity: 1;
+    opacity: 1;
+    position: relative;
 }
 
 .scroll-link {
