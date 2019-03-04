@@ -8,6 +8,8 @@
     <title>Document</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
 </head>
 
 <body>
@@ -45,54 +47,137 @@
 
         </div>
 
+        <hr id="hr-1">
 
         <h1 class="datenbanksystem"></h1>
-        
+
         <h1 id="relationale-datenbanken">Relationale Datenbanken</h1>
         <div class="r-d-abschnitt">
             <p>
-                    Eine relationale Datenbank kann man sich als eine Sammlung von Tabellen (den Relationen) vorstellen,
-                     in welchen Datensätze abgespeichert sind. Jede Zeile (Tupel) in einer Tabelle ist ein Datensatz (record).
-                     Jedes Tupel besteht aus einer Reihe von Attributwerten (Attribute = Eigenschaften),
-                      den Spalten der Tabelle.
+                Eine relationale Datenbank kann man sich als eine Sammlung von Tabellen (den Relationen) vorstellen,
+                in welchen Datensätze abgespeichert sind. Jede Zeile (Tupel) in einer Tabelle ist ein Datensatz
+                (record).
+                Jedes Tupel besteht aus einer Reihe von Attributwerten (Attribute = Eigenschaften),
+                den Spalten der Tabelle.
             </p>
-
+            <img src="bilder/relationale-datenbank.jpg" id="r-d-img" id="img-same" alt="Relationale Datenbank" />
         </div>
-    <img src="bilder/relationale-datenbank.jpg" id="r-d-img" alt="Relationale Datenbank"/>
+
 
         <h1 id="modelieren">Modelieren</h1>
         <div class="m-abschnitt">
-            <p> Ein Datenbank-Modell ist für die Strukturierung einer Datenbank zuständig. Durch diese Strukturierung 
-                kann man die Verknüpfungen der Tabellen sowie die Verbindungen zwischen den Daten übersichtlicher darstellen. Um dies tun zu können, werden Tabellen 
+            <p> Ein Datenbank-Modell ist für die Strukturierung einer Datenbank zuständig. Durch diese Strukturierung
+                kann man die Verknüpfungen der Tabellen sowie die Verbindungen zwischen den Daten übersichtlicher
+                darstellen. Um dies tun zu können, werden Tabellen
                 genutzt.Das Endresultat dieses Vorgangs wird "Relationale Datenbank" genannt.
             </p>
-            <img src="bilder/sql-modellieren.png" id="sql-modellieren"/>
+            <img src="bilder/sql-modellieren.png" id="sql-modellieren" />
         </div>
-        
 
-    <div class="modellieren">
-        <div class="pk">
-            <p>Primary Key</p>
+
+        <div class="modellieren">
+            <div class="pk">
+                <p>Primary Key</p>
+            </div>
+            <div class="fk">
+                <p>Foreign Key</p>
+            </div>
         </div>
-        <div class="fk">
-        <p>Foreign Key</p>
-        </div>
-    </div>
-        
+
         <h1 id="normalisieren">Normalisieren</h1>
-        <div class="n-abschnitt"></div>
+        <div class="n-abschnitt">
+            <div class="erste_normalform">
+                <h3>Erste Normalform</h3>
+                <p>Die Erste Normalform wird für die Verringerung der Datensätze genutzt. Genauer gesagt:
+                    Es dient dazu, mehrere Einträge in einem Datensatz zu entfernen und sie schlussendlich in einen
+                    neuen Datensatz zu tun.
+                </p>
+                <img src="bilder/erste_normalform.gif" />
+            </div>
+
+        </div>
+
+        <div class="n2-abschnitt">
+            <h3>Zweite Normalform</h3>
+            <p>
+                Ein Relationstyp (Tabelle) befindet sich genau dann in der zweiten Normalform (2NF),
+                wenn er sich in der ersten Normalform (1NF) befindet und jedes Nichtschlüsselattribut
+                von jedem Schlüsselkandidaten voll funktional abhängig ist.
+            </p>
+            <img src="bilder/erste_normalform_beispiel.jpg" />
+            <img src="bilder/zweite_normalform_beispiel.jpg" />
+        </div>
+
+        <div class="n3-abschnitt">
+            <h3>Dritte Normalform</h3>
+            <p>
+                Die dritte Normalform wird für die Verfeinerung der relationalen Datenbank genutzt. Damit werden
+                die Bezüge der Primary- sowie Foreign-Keys klargestellt und Spalten, welche weiterhin nicht passen,
+                werden in eine
+                eigene Tabelle platziert.
+            </p>
+            <img src="bilder/dritte_normalform_kundenbeispiel-409x61.jpg" />
+            <img src="bilder/dritte_normalform_beispiel.jpg" />
+        </div>
+
+        <div class="ddl-abschnitt">
+            <h1>Data Definition Language</h1>
+            <p>
+                Die "Data Definition Language wird verwendet, um die Struktur einer Datenbank aufzubauen
+                und richtig zu definieren". Damit ist das Erstellen,Bearbeiten und weiteres einer Datenbank
+                gemeint.
+            </p>
+            <img src="bilder/DDL-statement.jpg" id="ddl-statement" />
+            <h3>Datenbank erstellen</h3>
+            <p>
+                Eine Datenbank kann mit dem Befehl "create" erstellt werden. "Database" steht für die Datenbank. Danach
+                folgt noch der Name der Datenbank. Am Schluss schliesst man den Befehl mit einem ";" ab.
+            </p>
+            <img src="bilder/create_database.png" />
+        </div>
+
+        <div class="ddl2-abschnitt">
+            <p>
+                Mit "show databases;" können alle Datenbanken angezeigt werden. Dabei wird nur der Name aller
+                Datenbanken ausgegeben. Somit kann man überprüfen, ob die Datenbank erfolgreich und nach der Bedürfniss
+                erstellt wurde.
+            </p>
+            <img src="bilder/show_databases.PNG" />
+        </div>
+
+        <div class="ddl3-abschnitt">
+            <h3>Tabelle erstellen</h3>
+            <p>
+                Um eine Tabelle erstellen zu können, muss die Datenbank, in welcher dann die Tabelle erstellt werden
+                soll,
+                ausgewählt werden. Mit "use Datenbank-Name;" kann man dies anrichten.
+                Mit dem Befehl "describe" kann der Aufbau einer Tabelle angezeigt werden. Hier können alle Primary Keys, 
+                Foreign Keys,Spalten und weiteres aufgerufen werden.
+            </p>
+            <img src="bilder/create_table.PNG" />
+        </div>
+
+        <div class="ddl4-abschnitt">
+            <h3>Ändern von Tabellen</h3>
+            <p>
+                Eine Tabelle ändert man mit dem Befehl "alter table". Sobald dies eingegeben wurde, folgen Tabellenname
+                und Funktion danach. Mit "add" kann zum Beispiel ein Datensatz oder eine Spalte hinzugefügt werden.
+                Mit "drop" kann zum Beispiel ein Foreign Key oder ein Primary Key entfernt werden.
+            </p>
+            <img src="bilder/alter_table_add_columnname.gif" id="img-same" />
+
+        </div>
+
+
         
-        </main>
-    
 
 
 
 
-
-
+    </main>
 
     <footer id="footer-titel">
-            <a href="www.instagram.com"><img src="bilder/instagram-logo.svg" id="instagram-logo"/></a>
+        <a href="www.instagram.com"><img src="bilder/instagram-logo.svg" id="instagram-logo" /></a>
 
         <div class="kontaktinfos">
             <h3 id="kontaktinfos-titel">Kontaktinformationen</h3>
@@ -105,21 +190,21 @@
         </div>
 
         <div class="copyright">
-                Copyright © by Aleks Cvetanovic
+            Copyright © by Aleks Cvetanovic
         </div>
 
-    </footer>
+    </footer> 
 
-	<a class="scroll-link" href="#footer-titel">
-            <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+    <a class="scroll-link" href="#footer-titel">
+        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
             <g fill="none" fill-rule="evenodd">
-                <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
-                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
+                <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
+                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
             </g>
         </svg>
-        </a>
-        
-    
+    </a>
+
+
 </body>
 
 </html>

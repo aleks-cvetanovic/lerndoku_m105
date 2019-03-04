@@ -4,14 +4,31 @@ html {
 
 body {
     margin:0;
-    font-family: 'Josef Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 
-.dropdown-content a {
+.dropdown-content {
     text-decoration: none;
-    color:black;
     display:none;
+    position:absolute;
+}
+
+.dropdown-content a {
+    color:black;
+    text-decoration:none;
+    display:block;
+    padding:10px 10px 10px 10px;
+
+}
+
+.dropdown {
+    position:relative;
+    display:inline-block;
+    border-color:rgb(111, 198, 219);
+    transition: background-color 1s;
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -21,7 +38,7 @@ header {
     position:fixed;
     top:0;
     width:100%;
-    box-shadow: 0px 0px 100px rgb(38, 119, 199);
+    box-shadow: 0px 0px 80px rgb(38, 119, 199);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -40,6 +57,8 @@ header {
     color: black;
     font-weight: bold;
     border-bottom:none;
+    width:fit-content;
+
 }
 
 .dropbtn:hover {
@@ -48,9 +67,6 @@ header {
     
 }
 
-.dropbtn:hover .dropdown-content {
-    display:block;
-}
 
 #sql-logo {
     width: 120px;
@@ -61,30 +77,49 @@ header {
 }
 
 main {
+    padding-bottom: 3cm;
+    margin-left: 180px;
+    margin-right: 180px;
     padding-left: 300px;
     padding-right: 300px;
-    margin-top: 200px;
-    margin-left: 0;
-    margin-right: 0;
+    border:solid rgb(152, 200, 214) 10px;
+    box-shadow: 0px 10px 80px 15px rgb(152, 200, 214); ;
+    background-color: rgb(152, 200, 214);
 }
 
 #was-ist-sql {
     text-align: center;
 }
 
+#hr-1 { 
+    border:solid rgb(38, 119, 199) 3px;
+    border-radius:10px 10px 10px 10px;
+    margin-top:50px;
+    margin-bottom:auto;
+    width:1000px;
+}
+
 #relationale-datenbanken {
     text-align:center;
-    margin-top: 150px;
+}
+
+.n-abschnitt {
+    border: rgb(111, 198, 219);
+}
+
+#ddl-statement {
+    width:500px;
+    border-color: rgb(111, 198, 219);
 }
 
 footer {
     
     background-color:rgb(182, 227, 241);
     position: relative;
-    box-shadow: 0px 0px 100px rgb(38, 119, 199);
+    box-shadow: 0px 0px 80px rgb(38, 119, 199);
     bottom:0px;
     margin:0;
-    padding: 10px 0 10px 20px;  
+    padding: 0 0 0 20px;  
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
@@ -96,7 +131,7 @@ footer {
     text-align: center;
     padding:0;
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 150px;
 }
 
 .r-d-abschnitt {
@@ -105,25 +140,32 @@ footer {
 }
 
 #r-d-img {
-    display:flex;
-    margin-left:300px;
-    width: 700px;
+    margin:0 auto;
+    width:700px;
 }
+
+
 
 #instagram-logo {
     width: 65px;
     float:right;
-    margin-top: 1cm;
-    margin-right: 20px;
+    margin-top: 50px;
+    margin-right: 40px;
 }
 
 .kontaktinfos-content p {
-    margin: 5px;
+    margin: 7px;
+}
 
+.kontaktinfos-content {
+    margin-left: 25px;
 }
 
 #kontaktinfos-titel {
     text-decoration: underline;
+    padding-top: 50px;
+    margin-top:0px;
+    margin-left:30px;
 }
 
 main div, h1 {
@@ -133,7 +175,11 @@ main div, h1 {
 }
 
 h1 {
-    margin-top:4cm;
+    margin-top:8cm;
+}
+
+h3 {
+    margin-top: 4cm;
 }
 
 #sql-modellieren {
@@ -162,6 +208,11 @@ border-radius:30px;
 
 }
 
+#img-same {
+    margin:0 auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
 *,
 *::before,
 *::after {
@@ -169,15 +220,13 @@ border-radius:30px;
 }
 
 .mouse {
-	max-width: 2.5rem;
-	width: 100%;
+	max-width: 3rem;
+	width: 200%;
     height: auto;
-    background-color:rgb(182, 227, 241);
+    background-color:rgb(152, 191, 218);
     bottom:0;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    border-radius: 300px;
+    padding:0px;
 }
 
 .scroll {
@@ -192,9 +241,9 @@ border-radius:30px;
 }
 
 .scroll-link {
-	position: absolute;
+	position: fixed;
 	bottom: 1rem;
-	left: 50%;
+	right:20px;
 	transform: translateX(-50%);
 }
 
