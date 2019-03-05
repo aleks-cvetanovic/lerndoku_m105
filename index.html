@@ -48,9 +48,9 @@
     </header>
 
     <main>
-        <h1 id="was-ist-sql" data-aos="fade-right">Was ist SQL?
+        <h1 id="was-ist-sql">Was ist SQL?
         </h1>
-        <div class="w-i-s-abschnitt" data-aos="fade-right">
+        <div class="w-i-s-abschnitt">
             <p>
                 SQL ist eine Datenbanksprache zur Definition von Datenstrukturen
                 in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen)
@@ -63,7 +63,7 @@
 
         <h1 class="datenbanksystem"></h1>
 
-        <h1 id="relationale-datenbanken" data-aos="fade-right">Relationale Datenbanken</h1>
+        <h1 id="relationale-datenbanken">Relationale Datenbanken</h1>
         <div class="r-d-abschnitt">
             <p>
                 Eine relationale Datenbank kann man sich als eine Sammlung von Tabellen (den Relationen) vorstellen,
@@ -222,7 +222,7 @@
 
         <div class="in Tabelle gruppieren">
             <h3>In Tabelle gruppieren</h3>
-            <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine
+            <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine zusätzliche
                 Funktion genutzt werden.
             </p>
             <p>
@@ -232,9 +232,27 @@
                 <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
             </p>
             <p>
-                select sum(quantity) from inventory_transactions group by product_id having sum(quantity) >= 70;
+                <span class="eins">select</span> <span class="zwei">sum(quantity)</span> <span class="drei">from</span>
+                <span class="vier">inventory_transactions</span>
+                <span class="fünf">group by</span> <span class="sechs">product_id</span> <span class="sieben">having</span>
+                <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
             </p>
-            <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif"/>
+            <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif" />
+        </div>
+
+
+        <div class="tabelle-sortieren">
+            <h3>In Tabelle sortieren</h3>
+            <p>
+                Sortierungen sind für die Übersicht einer Abfrage sehr hilfreich. Zusätzlich können Sortierungen
+                für eine Zeiteinsparung sorgen. Hierfür wird die Funktion
+                "order by" verwendet. Nach "order by" folgt ein "=" Zeichen. Der Wert folgt als aller letztes. Dies ist
+                dann
+                verantwortlich für die Sortierung. Häufig wird nach Werten und Spalten sortiert. Zum einen kann nach
+                Preisen, Zahlen usw. sortiert
+                werden, zum anderen nach Wörtern, wichtigen Kürzeln usw.
+            </p>
+
         </div>
 
 
@@ -256,6 +274,19 @@
                 <p>8207 Schaffhausen</p>
             </div>
         </div>
+
+        <div class="links">
+            <h3 id="links-titel">Nützliche externe Webseiten</h3>
+
+
+        </div>
+
+
+        <form action="C:\xampp\htdocs\lerndoku_m105\lerndoku_m105\extern_nützliche_webseiten">
+            <input type="submit" value="Download"/>
+        </form>
+
+
 
         <div class="copyright">
             Copyright © by Aleks Cvetanovic

@@ -189,6 +189,13 @@ footer {
     margin:0 auto;
 }
 
+#img-groupby-beispiel {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 #r-d-img {
     margin:0 auto;
     width:700px;
@@ -247,6 +254,58 @@ footer {
 
 }
 
+.eins {
+    color:green;
+    font-weight: bold;
+}
+
+.zwei {
+    color:blue;
+    font-weight: bold;
+
+}
+
+.drei {
+    color:red;
+    font-weight: bold;
+
+}
+
+.vier {
+    color:orange;
+    font-weight: bold;
+
+}
+
+.fünf {
+    color:green;
+    font-weight: bold;
+
+}
+
+.sechs {
+    color:purple;
+    font-weight: bold;
+
+}
+
+.sieben {
+    color:green;
+    font-weight: bold;
+
+}
+
+.acht {
+    color:blue;
+    font-weight: bold;
+
+}
+
+.neun {
+    color:green;
+    font-weight: bold;
+
+}
 
 #instagram-logo {
     width: 65px;
