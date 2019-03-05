@@ -241,18 +241,21 @@
             <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine zusätzliche
                 Funktion genutzt werden.
             </p>
-            <p>
-                <br />
-                Beispiel:
-                <br />
-                <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
-            </p>
-            <p>
-                <span class="eins">select</span> <span class="zwei">sum(quantity)</span> <span class="drei">from</span>
-                <span class="vier">inventory_transactions</span>
-                <span class="fünf">group by</span> <span class="sechs">product_id</span> <span class="sieben">having</span>
-                <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
-            </p>
+
+            <div class="gruppieren-bsp">
+                <p>
+                    <br />
+                    Beispiel:
+                    <br />
+                    <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
+                </p>
+                <p>
+                    <span class="eins">select</span> <span class="zwei">sum(quantity)</span> <span class="drei">from</span>
+                    <span class="vier">inventory_transactions</span>
+                    <span class="fünf">group by</span> <span class="sechs">product_id</span> <span class="sieben">having</span>
+                    <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
+                </p>
+            </div>
             <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif" />
         </div>
 
@@ -300,13 +303,39 @@
 
         <div class="dml-abschnitt">
             <h1>Data Manipulation Language</h1>
-            <p>Die "Data Manipulation Language" wird grundsätzlich wie im Deutschen verstanden, dabei orientert man sich an das Wort "Manipulation" 
-                Damit ist das manipulieren bzw. verändern oder bearbeiten der Datei gemeint. In einem Unternehmen, welches viele Kunden hat und welche auch standardmässig 
-                viel Produkte bei dem Unternehmen kauft, könnte es zu sehr grossen Problemen führen. Man verliert sehr schnell den Überblick und kann den Gewinn sowie viel andere Faktoren 
-                nicht auswerten. Deswegen wird mit vielen Befehlen wie zum Beispiel "insert into" Datensätze in eine Tabelle eingefügt, sodass auch die Information an das Unternehmen ankommt, dass Kunden 
+            <p>Die "Data Manipulation Language" wird grundsätzlich wie im Deutschen verstanden, dabei orientert man
+                sich an das Wort "Manipulation"
+                Damit ist das manipulieren bzw. verändern oder bearbeiten der Datei gemeint. In einem Unternehmen,
+                welches viele Kunden hat und welche auch standardmässig
+                viel Produkte bei dem Unternehmen kauft, könnte es zu sehr grossen Problemen führen. Man verliert sehr
+                schnell den Überblick und kann den Gewinn sowie viel andere Faktoren
+                nicht auswerten. Deswegen wird mit vielen Befehlen wie zum Beispiel "insert into" Datensätze in eine
+                Tabelle eingefügt, sodass auch die Information an das Unternehmen ankommt, dass Kunden
                 Produkte vom Unternehmen gekauft hatte.
             </p>
 
+        </div>
+
+
+        <div class="Werte einfügen">
+            <h3>Werte einfügen</h3>
+            <p>Um Datensätze einfügen zu können, muss der Befehl "insert into" genutzt werden. Danach muss bei "values"
+                eingegeben werden, welche
+                Werte in den Datensätzen stehen sollen.
+            </p>
+            <br />
+            <p>Beispiel:</p>
+            <p></p>
+        </div>
+
+        <div class="Bestehende Datensätze bearbeiten">
+            <h3>Bestehende Datensätze bearbeiten</h3>
+            <p> Mit dem "update"-statement können Werte in einer Tabelle (Datensätze) bearbeitet werden.
+                Der Syntax dieses statements sieht folgendermassen aus:
+                <img src="bilder/update_set.PNG" alt="UPDATE-Statement" class="update-set" />
+                Dieses statement kann bei Kunden,
+                welche ständig Produkte kaufen und Rückerstattungen für diese Produkte anfordern, sehr nützlich sein.
+            </p>
         </div>
 
 
