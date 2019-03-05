@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lerndokumentation_CvA_SQL</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+
     <header>
         <nav>
 
@@ -43,9 +48,9 @@
     </header>
 
     <main>
-        <h1 id="was-ist-sql">Was ist SQL?
+        <h1 id="was-ist-sql" data-aos="fade-right">Was ist SQL?
         </h1>
-        <div class="w-i-s-abschnitt">
+        <div class="w-i-s-abschnitt" data-aos="fade-right">
             <p>
                 SQL ist eine Datenbanksprache zur Definition von Datenstrukturen
                 in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen)
@@ -58,7 +63,7 @@
 
         <h1 class="datenbanksystem"></h1>
 
-        <h1 id="relationale-datenbanken">Relationale Datenbanken</h1>
+        <h1 id="relationale-datenbanken" data-aos="fade-right">Relationale Datenbanken</h1>
         <div class="r-d-abschnitt">
             <p>
                 Eine relationale Datenbank kann man sich als eine Sammlung von Tabellen (den Relationen) vorstellen,
@@ -170,13 +175,14 @@
             <p>
                 Eine Tabelle ändert man mit dem Befehl "alter table". Sobald dies eingegeben wurde, folgen Tabellenname
                 und Funktion danach. Mit "add" kann zum Beispiel ein Datensatz oder eine Spalte hinzugefügt werden.
-                Mit "drop" kann zum Beispiel ein Foreign Key oder ein Primary Key entfernt werden. Mit "change" kann ein/eine  
+                Mit "drop" kann zum Beispiel ein Foreign Key oder ein Primary Key entfernt werden. Mit "change" kann
+                ein/eine
                 Attribut (Spalte) bearbeitet werden.
             </p>
             <div class="ändern-tabelle-watermark-1">
-            <img src="bilder/alter_table_add_columnname.gif" id="img-same" />
-            <img src="bilder/alter_table_add_primary_key.gif" id="pk-img" id="img-same" />
-            <p id="watermark-1">add & drop</p>
+                <img src="bilder/alter_table_add_columnname.gif" id="img-same" />
+                <img src="bilder/alter_table_add_primary_key.gif" id="pk-img" id="img-same" />
+                <p id="watermark-1">add & drop</p>
             </div>
 
         </div>
@@ -196,31 +202,39 @@
 
         <div class="Ein Attribut aus Tabelle selektieren">
             <h3>Ein Attribut aus Tabelle selektieren</h3>
-            <p>Um eine Spalte aus einer Tabelle auslesen zu können, muss der Befehl "select" dafür 
-                genutzt werden. Nach "select" kommen die Spalten, welche ausgelesen werden sollen. Als aller letztes 
-                gibt man mit "from Tabellenname" den Ort der Spalte an, so weis das System, woher es die Daten holen soll.
+            <p>Um eine Spalte aus einer Tabelle auslesen zu können, muss der Befehl "select" dafür
+                genutzt werden. Nach "select" kommen die Spalten, welche ausgelesen werden sollen. Als aller letztes
+                gibt man mit "from Tabellenname" den Ort der Spalte an, so weis das System, woher es die Daten holen
+                soll.
             </p>
         </div>
 
         <div class="Nach Bedingung suchen">
-        <h3>Nach Bedingung suchen</h3>
-        <p>Um bestimmte Spalten, welche bestimmte Eigenschaften beinhalten,
-             auszulesen, muss der Befehl "where" verwendet werden. Danach folgt ein Operationszeichen (=,&lt;,&gt;) mit welchem wir die Ausgangslage 
-             der Bedingung bestimmen. Nach dem Operationszeichen folgt der Wert der Bedingung. Wenn es um eine Zahl geht, können die Anführungszeichen ("") 
-             weggelassen werden. Wenn es aber um Buchstaben geht, müssen diese Anführungszeichen beibehalten werden. 
+            <h3>Nach Bedingung suchen</h3>
+            <p>Um bestimmte Spalten, welche bestimmte Eigenschaften beinhalten,
+                auszulesen, muss der Befehl "where" verwendet werden. Danach folgt ein Operationszeichen (=,&lt;,&gt;)
+                mit welchem wir die Ausgangslage
+                der Bedingung bestimmen. Nach dem Operationszeichen folgt der Wert der Bedingung. Wenn es um eine Zahl
+                geht, können die Anführungszeichen ("")
+                weggelassen werden. Wenn es aber um Buchstaben geht, müssen diese Anführungszeichen beibehalten werden.
             </p>
         </div>
 
         <div class="in Tabelle gruppieren">
             <h3>In Tabelle gruppieren</h3>
-            <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine 
+            <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine
                 Funktion genutzt werden.
             </p>
             <p>
+                <br />
                 Beispiel:
-                <br/>
-
+                <br />
+                <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
             </p>
+            <p>
+                select sum(quantity) from inventory_transactions group by product_id having sum(quantity) >= 70;
+            </p>
+            <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif"/>
         </div>
 
 
@@ -249,7 +263,7 @@
 
     </footer>
 
-    <a class="scroll-link" href="#footer-titel">      
+    <a class="scroll-link" href="#footer-titel">
         <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
             <g fill="none" fill-rule="evenodd">
                 <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
@@ -257,6 +271,13 @@
             </g>
         </svg>
     </a>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 
 </body>
 

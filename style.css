@@ -32,7 +32,7 @@ body {
     right:20px;
 }
 
-.dropbtn:hover .dropdown-content {
+.dropbtn:focus .dropdown-content {
     display:block;
     right:30px;
     margin-top:80px;
@@ -45,7 +45,6 @@ body {
 
 
 }
-
 
 
 .dropbtn:hover {
