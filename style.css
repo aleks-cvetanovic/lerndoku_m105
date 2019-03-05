@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    padding-bottom:5px;
+    padding-bottom:1px;
     background-color:rgb(182, 227, 241);
     position:fixed;
     top:0;
@@ -68,7 +68,7 @@ header {
     border-bottom-left-radius: 2cm; 
     border-bottom-right-radius: 2cm;
     padding: 20px 100px 20px 100px;
-    margin: 30px 20px 35px 20px;
+    margin: 15px 20px 15px 20px;
     float:right;
     background-color:rgb(182, 227, 241);
     border: solid rgb(152, 200, 214) 3px;
@@ -92,7 +92,7 @@ header {
     border-bottom-left-radius: 2cm; 
     border-bottom-right-radius: 2cm;
     padding: 20px 100px 20px 100px;
-    margin: 30px 20px 35px 20px;
+    margin: 15px 20px 15px 20px;
     float:right;
     background-color:rgb(182, 227, 241);
     border: solid rgb(152, 200, 214) 3px;
@@ -112,7 +112,6 @@ header {
 #sql-logo {
     width: 120px;
     margin-top: 20px;
-    margin-bottom: 5px;
     float:left;
 
 }
