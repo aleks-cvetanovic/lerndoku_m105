@@ -46,6 +46,29 @@ body {
 
 }
 
+.downloadbtn {
+    border-top-left-radius: 2cm;
+    border-top-right-radius: 2cm;
+    border-bottom-left-radius: 2cm; 
+    border-bottom-right-radius: 2cm;
+    padding: 20px 100px 20px 100px;
+    margin: 5px 20px 0px 20px;
+    background-color:rgb(182, 227, 241);
+    border: solid rgb(152, 200, 214) 3px;
+    transition: background-color 1s;
+    color: black;
+    font-weight:bold;
+    width:fit-content;
+ 
+}
+
+.downloadbtn:hover {
+    cursor:pointer;
+    background-color: rgb(152, 200, 214);
+    box-shadow: 0px 0px 50px rgb(101, 153, 168);
+
+}
+
 
 .dropbtn:hover {
     text-decoration:none;
@@ -180,7 +203,7 @@ footer {
     text-align: center;
     padding:0;
     font-size: 13px;
-    margin-top: 150px;
+    margin-top: 60px;
 }
 
 .r-d-abschnitt {
@@ -331,6 +354,10 @@ footer {
     text-decoration: underline;
     padding-top: 50px;
     margin-top:0px;
+    margin-left:30px;
+}
+
+#links-titel {
     margin-left:30px;
 }
 

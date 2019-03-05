@@ -209,6 +209,22 @@
             </p>
         </div>
 
+        <div class="Ohne Duplikate selektieren">
+            <h3>Ohne Duplikate selektieren</h3>
+            <p>Wenn in einer Datenbank (Tabelle) sehr viele Kunden eingetragen sind, welche sehr viele Bestellungen
+                haben, jedoch davon nur diejenigen
+                selektieren möchte, welche nicht die gleichen Produkte bestellt haben, muss "distinct" dafür verwendet
+                werden.
+            </p>
+            <br />
+            <p>Beispiel:</p>
+            <br />
+            <p></p>
+            <p></p>
+
+        </div>
+
+
         <div class="Nach Bedingung suchen">
             <h3>Nach Bedingung suchen</h3>
             <p>Um bestimmte Spalten, welche bestimmte Eigenschaften beinhalten,
@@ -241,6 +257,30 @@
         </div>
 
 
+        <div class="Weitere Bedingung">
+            <h3>Weitere Bedingung "having"</h3>
+            <p>Diese Erweiterung ist eine selbständige Klausel des SELECT-Befehls und hat eigentlich nichts mit der
+                GROUP BY-Klausel zu tun.
+                Sie ist eine Ergänzung zu den Aggregatfunktionen,
+                wird deshalb überwiegend bei Gruppierungen verwendet und folgt ggf. direkt danach.
+                Dieser Befehl dient dazu, nicht alle Ergebnisse der Auswahl in die Ausgabe zu übernehmen, sondern nur
+                diejenigen, die den zusätzlichen Bedingungen entsprechen.
+                Im folgenden Beispiel (vergleiche oben unter „Gruppierung bei einer Tabelle“) wird festgestellt, an
+                welchen Orten sich genau eine Abteilung befindet.
+            </p>
+            <br />
+            <p>SELECT Ort,
+                COUNT(*) AS Anzahl
+                FROM Abteilung
+                GROUP BY Ort
+                HAVING COUNT(*) = 1
+                ORDER BY Ort;</p>
+
+        </div>
+
+
+
+
         <div class="tabelle-sortieren">
             <h3>In Tabelle sortieren</h3>
             <p>
@@ -254,6 +294,31 @@
             </p>
 
         </div>
+
+
+        <!-- DATA MANIPULATION LANGUAGE -->
+
+        <div class="dml-abschnitt">
+            <h1>Data Manipulation Language</h1>
+            <p>Die "Data Manipulation Language" wird grundsätzlich wie im Deutschen verstanden, dabei orientert man sich an das Wort "Manipulation" 
+                Damit ist das manipulieren bzw. verändern oder bearbeiten der Datei gemeint. In einem Unternehmen, welches viele Kunden hat und welche auch standardmässig 
+                viel Produkte bei dem Unternehmen kauft, könnte es zu sehr grossen Problemen führen. Man verliert sehr schnell den Überblick und kann den Gewinn sowie viel andere Faktoren 
+                nicht auswerten. Deswegen wird mit vielen Befehlen wie zum Beispiel "insert into" Datensätze in eine Tabelle eingefügt, sodass auch die Information an das Unternehmen ankommt, dass Kunden 
+                Produkte vom Unternehmen gekauft hatte.
+            </p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -283,9 +348,9 @@
 
 
         <form action="
-        lerndoku_m105/extern_nützliche_webseiten/Externe_nützliche_Webseiten.docx
+        https://github.com/aleks-cvetanovic/lerndoku_m105/tree/master/extern_n%C3%BCtzliche_webseiten
       ">
-            <input type="submit" value="Download"/>
+            <input type="submit" value="Download" class="downloadbtn" />
         </form>
 
 
