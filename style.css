@@ -12,6 +12,8 @@ body {
     text-decoration: none;
     display:none;
     position:absolute;
+    border-color: solid rgb(111, 198, 219) 3px;
+
 }
 
 .dropdown-content a {
@@ -23,14 +25,32 @@ body {
 }
 
 .dropdown {
-    position:relative;
-    display:inline-block;
     border-color:rgb(111, 198, 219);
     transition: background-color 1s;
     color: black;
     font-weight: bold;
+    right:20px;
 }
 
+.dropbtn:hover .dropdown-content {
+    display:block;
+    right:30px;
+    margin-top:80px;
+    animation-duration: 2s;
+    border: solid rgb(152, 200, 214) 3px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px; 
+    border-bottom-right-radius: 30px;
+
+
+}
+
+
+
+.dropbtn:hover {
+    text-decoration:none;
+}
 
 header {
     padding-bottom:5px;
@@ -48,23 +68,45 @@ header {
     border-top-right-radius: 2cm;
     border-bottom-left-radius: 2cm; 
     border-bottom-right-radius: 2cm;
-    padding: 10px 100px 10px 100px;
+    padding: 20px 100px 20px 100px;
     margin: 30px 20px 35px 20px;
     float:right;
-    background-color: lightblue;
-    border-color:rgb(111, 198, 219);
+    background-color:rgb(182, 227, 241);
+    border: solid rgb(152, 200, 214) 3px;
     transition: background-color 1s;
     color: black;
-    font-weight: bold;
-    border-bottom:none;
+    font-weight:bold;
     width:fit-content;
 
 }
 
 .dropbtn:hover {
     cursor:pointer;
-    background-color: rgb(38, 119, 199);
+    background-color: rgb(152, 200, 214);
+    box-shadow: 0px 0px 50px rgb(101, 153, 168);
     
+}
+
+.feedback-btn {
+    border-top-left-radius: 2cm;
+    border-top-right-radius: 2cm;
+    border-bottom-left-radius: 2cm; 
+    border-bottom-right-radius: 2cm;
+    padding: 20px 100px 20px 100px;
+    margin: 30px 20px 35px 20px;
+    float:right;
+    background-color:rgb(182, 227, 241);
+    border: solid rgb(152, 200, 214) 3px;
+    transition: background-color 1s;
+    color: black;
+    font-weight:bold;
+    width:fit-content;
+}
+
+.feedback-btn:hover {
+    cursor:pointer;
+    background-color: rgb(152, 200, 214);
+    box-shadow: 0px 0px 50px rgb(101, 153, 168);
 }
 
 
@@ -74,6 +116,19 @@ header {
     margin-bottom: 5px;
     float:left;
 
+}
+
+#watermark-1 {
+    position:absolute;
+    opacity:0.5;
+    color:rgb(202, 199, 199);
+    transform: rotate(-30deg);
+}
+
+.ändern-tabelle-watermark-1 p {
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
 }
 
 main {
@@ -107,10 +162,6 @@ main {
     border: rgb(111, 198, 219);
 }
 
-#ddl-statement {
-    width:500px;
-    border-color: rgb(111, 198, 219);
-}
 
 footer {
     
@@ -130,7 +181,7 @@ footer {
     bottom:0px;
     text-align: center;
     padding:0;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 150px;
 }
 
@@ -142,8 +193,60 @@ footer {
 #r-d-img {
     margin:0 auto;
     width:700px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
+#zweite-normalform {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#erste-normalform {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#dritte-normalform-kundenbeispiel {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#dritte-normalform-beispiel {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#sql-modellieren {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#ddl-statement {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 550px;
+
+}
 
 
 #instagram-logo {
@@ -151,6 +254,12 @@ footer {
     float:right;
     margin-top: 50px;
     margin-right: 40px;
+}
+
+#instagram-logo:hover {
+    cursor:pointer;
+    box-shadow: 0px 0px 50px rgb(101, 153, 168);
+
 }
 
 .kontaktinfos-content p {
@@ -208,9 +317,51 @@ border-radius:30px;
 
 }
 
+
+#create-database {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#img-normalisieren {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 #img-same {
     margin:0 auto;
-    border-radius: 10px 10px 10px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#pk-img {
+    padding-top:20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#create-table {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#show-databases {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
 }
 
 *,
