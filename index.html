@@ -72,6 +72,7 @@
             </p>
             <img src="bilder/relationale-datenbank.jpg" id="r-d-img" id="img-same" alt="Relationale Datenbank" />
         </div>
+        <hr id="hr-1">
 
 
         <h1 id="modelieren">Modelieren</h1>
@@ -93,6 +94,7 @@
                 <p>Foreign Key</p>
             </div>
         </div>
+        <hr id="hr-1">
 
         <h1 id="normalisieren">Normalisieren</h1>
         <div class="n-abschnitt">
@@ -129,6 +131,7 @@
             <img src="bilder/dritte_normalform_kundenbeispiel-409x61.jpg" id="dritte-normalform-kundenbeispiel" />
             <img src="bilder/dritte_normalform_beispiel.jpg" id="dritte-normalform-beispiel" />
         </div>
+        <hr id="hr-1">
 
         <h1>Datentypen</h1>
         <br />
@@ -293,6 +296,7 @@
             <h3>CHAR vs VARCHAR</h3>
             <p></p>
         </div>
+        <hr id="hr-1">
 
         <div class="ddl-abschnitt">
             <h1>Data Definition Language (DDL)</h1>
@@ -380,6 +384,7 @@
             </div>
 
         </div>
+        <hr id="hr-1">
 
         <div class="Data Control Language">
             <h1>Data Control Language (DCL)</h1>
@@ -453,6 +458,7 @@
 
         </div>
 
+        <hr id="hr-1">
 
 
         <div class="Data Query Language">
@@ -483,11 +489,15 @@
                 werden.
             </p>
             <br />
-            <p>Beispiel:</p>
-            <br />
-            <p></p>
-            <p></p>
-
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p><b>Die Spalte "job_title" von Tabelle "employees" ohne Duplikate anzeigen</b></p>
+                <p>
+                    <span class="eins">select</span> <span class="zwei">distinct</span> <span class="drei">job_title</span>
+                    <span class="vier">from</span>
+                    <span class="fünf">employees</span>
+                </p>
+            </div>
         </div>
 
 
@@ -567,6 +577,7 @@
             </p>
 
         </div>
+        <hr id="hr-1">
 
 
         <!-- DATA MANIPULATION LANGUAGE -->
@@ -686,6 +697,7 @@
 
             <p>Veranschaulichung:</p>
         </div>
+        <hr id="hr-1">
 
 
         <div class="joins">
@@ -786,9 +798,11 @@
             </p>
             <div class="gruppieren-bsp">
                 <p>Beispiel:</p>
-                <p><b>Dieser Join liefert alle Datensätze beider Tabellen, ggf. unter Berücksichtigung der WHERE-Klausel.
-                    Wenn Datensätze nach der Verknüpfungsbedingung zusammenpassen, werden sie in einer Zeile angegeben.
-                    Dort, wo es keinen „Partner“ gibt, wird ein NULL-Wert angezeigt.</b></p>
+                <p><b>Dieser Join liefert alle Datensätze beider Tabellen, ggf. unter Berücksichtigung der
+                        WHERE-Klausel.
+                        Wenn Datensätze nach der Verknüpfungsbedingung zusammenpassen, werden sie in einer Zeile
+                        angegeben.
+                        Dort, wo es keinen „Partner“ gibt, wird ein NULL-Wert angezeigt.</b></p>
                 <p>
                     <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from
                         orders</span>
@@ -799,11 +813,11 @@
 
             </div>
             <p>Veranschaulichung:</p>
-            <img src="bilder/fullouter_join.PNG" alt="Full Outer Join" id="img-drop-database"/>
+            <img src="bilder/fullouter_join.PNG" alt="Full Outer Join" id="img-drop-database" />
         </div>
 
         <div class="Funktionen/Operatoren">
-        <p></p>
+            <p></p>
         </div>
 
 
