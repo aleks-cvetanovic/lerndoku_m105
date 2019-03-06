@@ -21,25 +21,25 @@
 
     <header>
         <nav>
-
             <div class="dropdown">
-                <button class="dropbtn">Themen
 
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#was-ist-sql">Kleine Erklärung zu SQL</a>
-                        <a href="#">Relationale Datenbanken</a>
-                        <a href="#modellieren">Modelieren</a>
-                        <a href="#">Normalisieren</a>
-                        <a href="#">Datentypen</a>
-                        <a href="#">Data Definition Language</a>
-                        <a href="#">Data Control Language</a>
-                        <a href="#">Data Query Language</a>
-                        <a href="#">Data Manipulation Language</a>
-                        <a href="#">Funktionen/Operatoren</a>
-                        <a href="#">JOINs</a>
-                    </div>
+                <button class="dropbtn">Themen</button>
+
+
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#was-ist-sql">Kleine Erklärung zu SQL</a>
+                    <a href="#">Relationale Datenbanken</a>
+                    <a href="#modellieren">Modelieren</a>
+                    <a href="#">Normalisieren</a>
+                    <a href="#">Datentypen</a>
+                    <a href="#">Data Definition Language</a>
+                    <a href="#">Data Control Language</a>
+                    <a href="#">Data Query Language</a>
+                    <a href="#">Data Manipulation Language</a>
+                    <a href="#">Funktionen/Operatoren</a>
+                    <a href="#">JOINs</a>
+                </div>
             </div>
-            </button>
 
             <img src="bilder/sql-logo.png" id="sql-logo" alt="SQL-Logo" />
         </nav>
@@ -288,6 +288,11 @@
                     x ist 1, 2, 3, 4 oder 8.</td>
             </tr>
         </table>
+
+        <div class="char-vs-varchar">
+            <h3>CHAR vs VARCHAR</h3>
+            <p></p>
+        </div>
 
         <div class="ddl-abschnitt">
             <h1>Data Definition Language (DDL)</h1>
@@ -726,25 +731,26 @@
 
         <div class="left-join">
             <h3>Left Join</h3>
-            <p>Der Left Join funktioniert ähnlich wie der Inner Join, hat aber einen gewissen Unterschied. 
-                Einträge, welche in der linken Tabelle sind, müssen keine Verbindung zu den Daten der rechten 
+            <p>Der Left Join funktioniert ähnlich wie der Inner Join, hat aber einen gewissen Unterschied.
+                Einträge, welche in der linken Tabelle sind, müssen keine Verbindung zu den Daten der rechten
                 Tabell haben, um selektiert zu werden.
             </p>
             <div class="gruppieren-bsp">
                 <p>Beispiel:</p>
                 <p><b>Listen Sie alle Kunden auf, welche keine einzigen Bestellungen aufgegeben haben.</b></p>
                 <p>
-                        <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from customers</span>
-                        <span class="vier">left join orders</span>
-                        <span class="sechs">on customers.id = orders.customer_id</span>
-                        <span class="drei">where orders.order_date is null;</span> 
-                    </p>
+                    <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from
+                        customers</span>
+                    <span class="vier">left join orders</span>
+                    <span class="sechs">on customers.id = orders.customer_id</span>
+                    <span class="drei">where orders.order_date is null;</span>
+                </p>
 
-    
+
             </div>
 
             <p>Veranschaulichung:</p>
-            <img src="bilder/leftjoin.gif" alt="Left Join" id="img-innerjoin"/>
+            <img src="bilder/leftjoin.gif" alt="Left Join" id="img-innerjoin" />
 
         </div>
 
@@ -752,13 +758,52 @@
 
         <div class="right-join">
             <h3>Right Join</h3>
+            <p>Der Right Join ist prinzipiell genau das Gleiche wie der Left Join. Beim Right Join wird auf die
+                rechte Tabelle bezogen, nicht auf die Linke.
+            </p>
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p><b>Listen Sie alle Kunden auf, welche keine einzigen Bestellungen aufgegeben haben.</b></p>
+                <p>
+                    <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from
+                        orders</span>
+                    <span class="vier">right join customers</span>
+                    <span class="sechs">on customers.id = orders.customer_id</span>
+                    <span class="drei">where orders.order_date is null;</span>
+                </p>
+            </div>
+            <p>Veranschaulichung:</p>
+            <img src="bilder/rightjoin.PNG" id="img-rightjoin" alt="Right Join" />
 
         </div>
 
 
         <div class="fullouter-join">
             <h3>Full Outer Join</h3>
+            <p>Bei einem Full Outer Join handelt es sich um eine Kombination aus einem Left- und einem
+                Right Join. Das Ziel dabei ist, Datensätze zu verknüpfen. Falls es aber keine Beziehungen
+                gibt, dann sollen die entsprechenden Felder beider Tabellen mit einem "null" befüllt werden.
+            </p>
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p><b>Dieser Join liefert alle Datensätze beider Tabellen, ggf. unter Berücksichtigung der WHERE-Klausel.
+                    Wenn Datensätze nach der Verknüpfungsbedingung zusammenpassen, werden sie in einer Zeile angegeben.
+                    Dort, wo es keinen „Partner“ gibt, wird ein NULL-Wert angezeigt.</b></p>
+                <p>
+                    <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from
+                        orders</span>
+                    <span class="vier">right join customers</span>
+                    <span class="sechs">on customers.id = orders.customer_id</span>
+                    <span class="drei">where orders.order_date is null;</span>
+                </p>
 
+            </div>
+            <p>Veranschaulichung:</p>
+            <img src="bilder/fullouter_join.PNG" alt="Full Outer Join" id="img-drop-database"/>
+        </div>
+
+        <div class="Funktionen/Operatoren">
+        <p></p>
         </div>
 
 
@@ -783,15 +828,15 @@
         </div>
 
         <div class="links">
-                <h3 id="links-titel"><u>Nützliche externe Webseiten</u></h3>
-               
-                <form action="
-                https://github.com/aleks-cvetanovic/lerndoku_m105/tree/master/extern_n%C3%BCtzliche_webseiten">
-                    <input type="submit" value="Download" class="downloadbtn" />
-                </form>
-        
+            <h3 id="links-titel"><u>Nützliche externe Webseiten</u></h3>
 
-            </div>
+            <form action="
+                https://github.com/aleks-cvetanovic/lerndoku_m105/tree/master/extern_n%C3%BCtzliche_webseiten">
+                <input type="submit" value="Download" class="downloadbtn" />
+            </form>
+
+
+        </div>
 
 
 

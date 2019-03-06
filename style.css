@@ -43,7 +43,11 @@ body {
     right:20px;
 }
 
-.dropbtn:focus .dropdown-content {
+.dropdown:hover .dropbtn {
+    display:block;
+}
+
+.dropbtn:focus .dropdown {
     display:block;
     right:30px;
     margin-top:80px;
@@ -211,6 +215,15 @@ footer {
     border-bottom-right-radius: 15px;
     width:600px;
     transition: transform 0.2s;
+}
+
+#img-rightjoin {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width:600px;
+
 }
 
 #img-innerjoin:hover {
@@ -539,9 +552,6 @@ footer {
 
 #links-titel {
     margin-left:30px;
-}
-
-.links {
 }
 
 main div, h1 {
