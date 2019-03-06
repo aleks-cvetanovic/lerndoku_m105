@@ -67,7 +67,7 @@ header {
     border-top-right-radius: 2cm;
     border-bottom-left-radius: 2cm; 
     border-bottom-right-radius: 2cm;
-    padding: 20px 100px 20px 100px;
+    padding: 15px 100px 15px 100px;
     margin: 15px 20px 15px 20px;
     float:right;
     background-color:rgb(182, 227, 241);
@@ -91,7 +91,7 @@ header {
     border-top-right-radius: 2cm;
     border-bottom-left-radius: 2cm; 
     border-bottom-right-radius: 2cm;
-    padding: 20px 100px 20px 100px;
+    padding:15px 100px 15px 100px;
     margin: 15px 20px 15px 20px;
     float:right;
     background-color:rgb(182, 227, 241);
@@ -112,6 +112,7 @@ header {
 #sql-logo {
     width: 120px;
     margin-top: 20px;
+    margin-bottom: 20px;
     float:left;
 
 }
@@ -180,7 +181,8 @@ footer {
     text-align: center;
     padding:0;
     font-size: 13px;
-    margin-top: 150px;
+    margin-top:20px;
+
 }
 
 .r-d-abschnitt {
@@ -466,4 +468,11 @@ border-radius:30px;
 		opacity: 0;
 	}
 
+}
+
+
+@media (min-width: 600px) {
+    main {
+        max-width: 0 12.5% 1% 12.5%;
+    }
 }
