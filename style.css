@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    margin:0;
 }
 
 body {
@@ -43,6 +44,28 @@ body {
     border-bottom-left-radius: 30px; 
     border-bottom-right-radius: 30px;
 
+}
+
+.downloadbtn {
+    border-top-left-radius: 2cm;
+    border-top-right-radius: 2cm;
+    border-bottom-left-radius: 2cm; 
+    border-bottom-right-radius: 2cm;
+    padding: 20px 100px 20px 100px;
+    margin: 5px 20px 0px 20px;
+    background-color:rgb(182, 227, 241);
+    border: solid rgb(152, 200, 214) 3px;
+    transition: background-color 1s;
+    color: black;
+    font-weight:bold;
+    width:fit-content;
+ 
+}
+
+.downloadbtn:hover {
+    cursor:pointer;
+    background-color: rgb(152, 200, 214);
+    box-shadow: 0px 0px 50px rgb(101, 153, 168);
 
 }
 
@@ -172,6 +195,7 @@ footer {
     padding: 0 0 0 20px;  
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    width:100%;
 
 
 }
@@ -255,6 +279,103 @@ footer {
 
 }
 
+.update-set {
+    margin:20px 0 20px 0;
+}
+
+.gruppieren-bsp {
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px; 
+
+    border-bottom-right-radius: 30px;
+
+    border: solid rgb(80, 145, 165) 3px;
+
+    transition: background-color 1s;
+
+    margin-bottom: 20px;
+
+}
+
+.datensatz-bearbeiten-bsp {
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px; 
+
+    border-bottom-right-radius: 30px;
+
+    border: solid rgb(80, 145, 165) 3px;
+
+    transition: background-color 1s;
+
+    margin-bottom: 20px;
+
+}
+
+#img-update-set {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+.having-bsp {
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px; 
+
+    border-bottom-right-radius: 30px;
+
+    border: solid rgb(80, 145, 165) 3px;
+
+    transition: background-color 1s;
+
+    margin-bottom: 20px;
+
+}
+
+.wert-einfügen-bsp-1 {
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px; 
+
+    border-bottom-right-radius: 30px;
+
+    border: solid rgb(80, 145, 165) 3px;
+
+    transition: background-color 1s;
+
+    margin-bottom: 20px;
+
+}
+
+.wert-einfügen-bsp-2 {
+    border-top-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px; 
+
+    border-bottom-right-radius: 30px;
+
+    border: solid rgb(80, 145, 165) 3px;
+
+    transition: background-color 1s;
+
+    margin-bottom: 20px;
+  
+}
+
 .eins {
     color:green;
     font-weight: bold;
@@ -336,6 +457,10 @@ footer {
     margin-left:30px;
 }
 
+#links-titel {
+    margin-left:30px;
+}
+
 main div, h1 {
     width: 600px;
     margin:0 auto;
@@ -401,7 +526,7 @@ border-radius:30px;
 }
 
 #pk-img {
-    padding-top:20px;
+    margin-top:20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -476,3 +601,13 @@ border-radius:30px;
         max-width: 0 12.5% 1% 12.5%;
     }
 }
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-r2sj{font-size:16px;background-color:#98bfda;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-koor{font-size:16px;background-color:#98bfda;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-nj5a{font-weight:bold;font-size:16px;background-color:#98bfda;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fbea{font-weight:bold;font-size:16px;background-color:#98bfda;color:#000000;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-zd5i{font-size:14px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}

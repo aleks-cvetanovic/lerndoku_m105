@@ -132,6 +132,156 @@
             <img src="bilder/dritte_normalform_beispiel.jpg" id="dritte-normalform-beispiel" />
         </div>
 
+        <h1>Datentypen</h1>
+        <br/>
+
+        <table class="tg">
+            <tr>
+              <th class="tg-nj5a">Datentyp</th>
+              <th class="tg-fbea">Speicherplatz</th>
+              <th class="tg-r2sj"><span style="font-weight:bold">Optionen</span></th>
+              <th class="tg-koor"><span style="font-weight:bold">Beschreibung</span></th>
+            </tr>
+            <tr>
+              <td class="tg-zd5i">TINYINT<br></td>
+              <td class="tg-0pky">1 Byte</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Ganzzahlen von 0 bis 255 oder von -128 bis 127.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">SMALLINT</td>
+              <td class="tg-0pky">2 Bytes</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Ganzzahlen von 0 bis 65.535 oder von -32.768 bis 32.767.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">MEDIUMINT</td>
+              <td class="tg-0pky">3 Bytes</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Ganzzahlen von 0 bis 16.777.215 oder von -8.388.608 bis 8.388.607.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">INT</td>
+              <td class="tg-0pky">4 Bytes</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Ganzzahlen von 0 bis ~4,3 Mill. oder von -2.147.483.648 bis 2.147.483.647.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">INTEGER</td>
+              <td class="tg-0pky">4 Bytes</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Alias für INT.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">BIGINT</td>
+              <td class="tg-0pky">8 Bytes</td>
+              <td class="tg-0pky">  [(M)] [U] [Z]  </td>
+              <td class="tg-0pky">Ganzzahlen von 0 bis 2^64-1 oder von -(2^63) bis (2^63)-1.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">FLOAT</td>
+              <td class="tg-0pky">4 Bytes</td>
+              <td class="tg-0pky">  [(M,D)] [U] [Z]  </td>
+              <td class="tg-0pky">Fließkommazahl mit Vorzeichen. Wertebereich von -(3,402823466×1038) bis -(1,175494351×10-38), 0 und 1,175494351×10-38 bis 3,402823466×1038.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">DOUBLE</td>
+              <td class="tg-0pky">8 Bytes</td>
+              <td class="tg-0pky">  [(M,D)] [U] [Z]  </td>
+              <td class="tg-0pky">Fließkommazahl mit Vorzeichen. Wertebereich von -(1,79769×10308) bis -(2.22507×10-308), 0 und 2.22507×10-308bis 1,79769×10308</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">REAL</td>
+              <td class="tg-0pky">8 Bytes</td>
+              <td class="tg-0pky">  [(M,D)] [U] [Z]  </td>
+              <td class="tg-0pky">Alias für DOUBLE.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">DECIMAL</td>
+              <td class="tg-0pky">M+x Bytes</td>
+              <td class="tg-0pky">  [(M,D)] [U] [Z]  </td>
+              <td class="tg-0pky">Fließkommazahl mit Vorzeichen. Speicherbedarf: x=1 wenn D=0, sonst x=2. Ab MySQL 5.1 binär gespeichert, zuvor als String.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">NUMERIC</td>
+              <td class="tg-0pky">M+x Bytes</td>
+              <td class="tg-0pky">  [(M,D)] [U] [Z]  </td>
+              <td class="tg-0pky">Alias für DECIMAL.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">DATE</td>
+              <td class="tg-0pky">3 Bytes</td>
+              <td class="tg-0pky">-</td>
+              <td class="tg-0pky">Datum im Format 'YYYY-MM-DD'. Wertebereich von 01.01.1000 bis 31.12.9999.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">DATETIME</td>
+              <td class="tg-0pky">8 Bytes</td>
+              <td class="tg-0pky">-</td>
+              <td class="tg-0pky">Datumsangabe im Format 'YYYY-MM-DD hh:mm:ss'. Wertebereich entspricht DATE.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">TIMESTAMP</td>
+              <td class="tg-0pky">4 Bytes</td>
+              <td class="tg-0pky">-</td>
+              <td class="tg-0pky">Zeitstempel. Wertebereich: 1.1.1970 bis 19.01.2038. Das Format variiert in den MySQL-Versionen.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">TIME</td>
+              <td class="tg-0pky">3 Bytes</td>
+              <td class="tg-0pky">-</td>
+              <td class="tg-0pky">Zeit zwischen -838:59:59 und 839:59:59. Ausgabe: hh:mm:ss.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">YEAR</td>
+              <td class="tg-0pky">1 Byte</td>
+              <td class="tg-0pky">  [(2|4)]  </td>
+              <td class="tg-0pky">Jahr zwischen 1901 bis 2155 bei (4) und zwischen 1970 bis 2069 bei (2).</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">CHAR</td>
+              <td class="tg-0pky">M Byte(s)</td>
+              <td class="tg-0pky">  (M) [BINARY]  </td>
+              <td class="tg-0pky">Zeichenkette fester Länge M. Wertebereich für M: 0 bis 255.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">VARCHAR</td>
+              <td class="tg-0pky">L+1 Bytes</td>
+              <td class="tg-0pky">  (M) [BINARY]  </td>
+              <td class="tg-0pky">Zeichenkette variabler Länge, Maximum ist M. Wertebereich für M: 0 bis 255.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">BINARY</td>
+              <td class="tg-0pky">M Bytes</td>
+              <td class="tg-0pky">  (M)  </td>
+              <td class="tg-0pky">Zum Speichern binärer Strings, unabhängig vom Zeichensatz. Wertebereich für M: 0 bis 255. Weiterer Typ: VARBINARY</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">BLOB</td>
+              <td class="tg-0pky">L+2 Bytes</td>
+              <td class="tg-0pky">  (M)  </td>
+              <td class="tg-0pky">Binäres Objekt mit variablen Daten. Weitere Typen: TINYBLOB, MEDIUMBLOB und LONGBLOB. M ist ab Version 4.1 definierbar.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">TEXT</td>
+              <td class="tg-0pky">L+2 Bytes</td>
+              <td class="tg-0pky">  (M)  </td>
+              <td class="tg-0pky">Wie BLOB. Ignoriert beim Sortieren &amp; Vergleichen Groß- und Kleinschreibung. Weitere Typen: TINYTEXT, MEDIUMTEXT, LONGTEXT. M ist ab Version 4.1 definierbar.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">ENUM</td>
+              <td class="tg-0pky">1 oder 2 Bytes</td>
+              <td class="tg-0pky">  ('val1', 'val2', ...)  </td>
+              <td class="tg-0pky">Liste von Werten (val1, val2, ...). 65.535 eineindeutige Elemente sind maximal möglich.</td>
+            </tr>
+            <tr>
+              <td class="tg-0pky">SET</td>
+              <td class="tg-0pky">x Bytes</td>
+              <td class="tg-0pky">  ('val1', 'val2', ...)  </td>
+              <td class="tg-0pky">String-Objekt mit verschiedenen Variablen. 64 sind maximal möglich. Speicherbedarf: x ist 1, 2, 3, 4 oder 8.</td>
+            </tr>
+          </table>
+
         <div class="ddl-abschnitt">
             <h1>Data Definition Language</h1>
             <p>
@@ -209,6 +359,22 @@
             </p>
         </div>
 
+        <div class="Ohne Duplikate selektieren">
+            <h3>Ohne Duplikate selektieren</h3>
+            <p>Wenn in einer Datenbank (Tabelle) sehr viele Kunden eingetragen sind, welche sehr viele Bestellungen
+                haben, jedoch davon nur diejenigen
+                selektieren möchte, welche nicht die gleichen Produkte bestellt haben, muss "distinct" dafür verwendet
+                werden.
+            </p>
+            <br />
+            <p>Beispiel:</p>
+            <br />
+            <p></p>
+            <p></p>
+
+        </div>
+
+
         <div class="Nach Bedingung suchen">
             <h3>Nach Bedingung suchen</h3>
             <p>Um bestimmte Spalten, welche bestimmte Eigenschaften beinhalten,
@@ -225,20 +391,50 @@
             <p>Die Funktion "group by" ist ein wenig komplex anzuwenden. Um sie nutzen zu können, muss eine zusätzliche
                 Funktion genutzt werden.
             </p>
-            <p>
-                <br />
-                Beispiel:
-                <br />
-                <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
-            </p>
-            <p>
-                <span class="eins">select</span> <span class="zwei">sum(quantity)</span> <span class="drei">from</span>
-                <span class="vier">inventory_transactions</span>
-                <span class="fünf">group by</span> <span class="sechs">product_id</span> <span class="sieben">having</span>
-                <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
-            </p>
+
+            <div class="gruppieren-bsp">
+                <p>
+                    <br />
+                    Beispiel:
+                    <br />
+                    <b>Abfrage nach quantity > 70 gruppiert nach "product_id"</b>
+                </p>
+                <p>
+                    <span class="eins">select</span> <span class="zwei">sum(quantity)</span> <span class="drei">from</span>
+                    <span class="vier">inventory_transactions</span>
+                    <span class="fünf">group by</span> <span class="sechs">product_id</span> <span class="sieben">having</span>
+                    <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
+                </p>
+            </div>
             <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif" />
         </div>
+
+
+        <div class="Weitere Bedingung">
+            <h3>Weitere Bedingung "having"</h3>
+            <p>Diese Erweiterung ist eine selbständige Klausel des SELECT-Befehls und hat eigentlich nichts mit der
+                GROUP BY-Klausel zu tun.
+                Sie ist eine Ergänzung zu den Aggregatfunktionen,
+                wird deshalb überwiegend bei Gruppierungen verwendet und folgt ggf. direkt danach.
+                Dieser Befehl dient dazu, nicht alle Ergebnisse der Auswahl in die Ausgabe zu übernehmen, sondern nur
+                diejenigen, die den zusätzlichen Bedingungen entsprechen.
+                Im folgenden Beispiel (vergleiche oben unter „Gruppierung bei einer Tabelle“) wird festgestellt, an
+                welchen Orten sich genau eine Abteilung befindet.
+            </p>
+            <br />
+            <div class="having-bsp">
+                <p>Beispiel:</p>
+                <p>SELECT Ort,
+                    COUNT(*) AS Anzahl
+                    FROM Abteilung
+                    GROUP BY Ort
+                    HAVING COUNT(*) = 1
+                    ORDER BY Ort;
+                </p>
+            </div>
+        </div>
+
+
 
 
         <div class="tabelle-sortieren">
@@ -254,6 +450,94 @@
             </p>
 
         </div>
+
+
+        <!-- DATA MANIPULATION LANGUAGE -->
+
+        <div class="dml-abschnitt">
+            <h1>Data Manipulation Language</h1>
+            <p>Die "Data Manipulation Language" wird grundsätzlich wie im Deutschen verstanden, dabei orientert man
+                sich an das Wort "Manipulation"
+                Damit ist das manipulieren bzw. verändern oder bearbeiten der Datei gemeint. In einem Unternehmen,
+                welches viele Kunden hat und welche auch standardmässig
+                viel Produkte bei dem Unternehmen kauft, könnte es zu sehr grossen Problemen führen. Man verliert sehr
+                schnell den Überblick und kann den Gewinn sowie viel andere Faktoren
+                nicht auswerten. Deswegen wird mit vielen Befehlen wie zum Beispiel "insert into" Datensätze in eine
+                Tabelle eingefügt, sodass auch die Information an das Unternehmen ankommt, dass Kunden
+                Produkte vom Unternehmen gekauft hatte.
+            </p>
+
+        </div>
+
+
+        <div class="Werte einfügen">
+            <h3>Werte einfügen</h3>
+            <p>Um Datensätze einfügen zu können, muss der Befehl "insert into" genutzt werden. Danach muss bei "values"
+                eingegeben werden, welche
+                Werte in den Datensätzen stehen sollen.
+            </p>
+            <br />
+            <div class="wert-einfügen-bsp-1">
+            <p>Erstes Beispiel:</p>
+            <p><b>Fügen sie in die Tabelle der Mitarbeiterprivilegien (priviliges) die zusätzliche
+                    Position "Fitness" in die entsprechende Tabelle ein und geben Sie dabei die Zielspalten an.
+                </b></p>
+
+            <p>
+                <span class="eins">insert into</span> <span class="zwei">privileges</span> <span class="drei">(privilege_name)</span>
+                <span class="fünf">values</span>
+                <span class="vier">('Fitness');</span> 
+            </p>
+        </div>
+
+
+
+        </div>
+
+        <div class="Bestehende Datensätze bearbeiten">
+            <h3>Bestehende Datensätze bearbeiten</h3>
+            <p> Mit dem "update"-statement können Werte in einer Tabelle (Datensätze) bearbeitet werden.
+                Der Syntax dieses statements sieht folgendermassen aus:
+                <img src="bilder/update_set.PNG" alt="UPDATE-Statement" class="update-set" />
+                Dieses statement kann bei Kunden,
+                welche ständig Produkte kaufen und Rückerstattungen für diese Produkte anfordern, sehr nützlich sein.
+                Mit der Bedingung "where" kann man genau die Daten der Kunden ändern, welche zum Beispiel an diesem
+                oder jenen
+                Datum ein Produkt bestellt haben.
+            </p>
+
+            <br />
+            <div class="datensatz-bearbeiten-bsp">
+                <p>Eigenes Beispiel:</p>
+                <p><b>Erhöhen sie die Preise der Produkte (standard_cost & list_price) um 5,5%
+                        und runden Sie die Erhöhung dabei auf ganze Euro. Machen Sie dies jedoch lediglich für
+                        Produkte, dessen Listenpreis 10 CHF oder günstiger ist.
+                    </b></p>
+                <p>
+                    <span class="eins">update</span> <span class="zwei">products</span> <span class="drei">set</span>
+                    <span class="vier">list_price</span>
+                    <span class="fünf">= round(list_price * 1.055)</span> <span class="sechs">,standard_cost</span>
+                    <span class="sieben">= round(standard_cost * 1.055)</span>
+                    <span class="acht">where</span> <span class="neun">list_price &#x3C;= 10;</span>
+                </p>
+            </div>
+            <br />
+            <p>Veranschaulichung:</p>
+            <img src="bilder/update_set_veranschaulichung.gif" alt="Bestehende Datensätze bearbeiten" id="img-update-set" />
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -283,9 +567,9 @@
 
 
         <form action="
-        lerndoku_m105/extern_nützliche_webseiten/Externe_nützliche_Webseiten.docx
+        https://github.com/aleks-cvetanovic/lerndoku_m105/tree/master/extern_n%C3%BCtzliche_webseiten
       ">
-            <input type="submit" value="Download"/>
+            <input type="submit" value="Download" class="downloadbtn" />
         </form>
 
 
