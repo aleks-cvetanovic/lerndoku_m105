@@ -726,6 +726,25 @@
 
         <div class="left-join">
             <h3>Left Join</h3>
+            <p>Der Left Join funktioniert ähnlich wie der Inner Join, hat aber einen gewissen Unterschied. 
+                Einträge, welche in der linken Tabelle sind, müssen keine Verbindung zu den Daten der rechten 
+                Tabell haben, um selektiert zu werden.
+            </p>
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p><b>Listen Sie alle Kunden auf, welche keine einzigen Bestellungen aufgegeben haben.</b></p>
+                <p>
+                        <span class="eins">select customers.first_name,customers.last_name</span> <span class="zwei">from customers</span>
+                        <span class="vier">left join orders</span>
+                        <span class="sechs">on customers.id = orders.customer_id</span>
+                        <span class="drei">where orders.order_date is null;</span> 
+                    </p>
+
+    
+            </div>
+
+            <p>Veranschaulichung:</p>
+            <img src="bilder/leftjoin.gif" alt="Left Join" id="img-innerjoin"/>
 
         </div>
 
