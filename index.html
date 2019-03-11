@@ -35,8 +35,8 @@
                     <a href="#">Data Control Language</a>
                     <a href="#">Data Query Language</a>
                     <a href="#">Data Manipulation Language</a>
-                    <a href="#">Funktionen/Operatoren</a>
                     <a href="#">JOINs</a>
+                    <a href="#">Funktionen/Operatoren</a>
                 </div>
             </div>
 
@@ -71,6 +71,9 @@
                 <p><b>sudo apt-get install mysql-server mysql-client</b></p>
             </div>
             <p>Die Installation muss mit "Y" für Yes (oder "J" für Ja) bestätigt werden.</p>
+            <p>Wichtig: Geben Sie im pinken Dialogfenster ein Passwort für den
+                root User der Datenbank ein und merken Sie sich dieses!
+                Das Passwort von root kann nur schwer zurückgesetzt werden.</p>
         </div>
 
         <hr id="hr-1">
@@ -317,7 +320,7 @@
         <hr id="hr-1">
 
         <div class="char-vs-varchar">
-            <h3>CHAR vs VARCHAR</h3>
+            <h1>CHAR vs VARCHAR</h1>
             <p>CHAR und VARCHAR wirken auf den ersten Blick identisch. Jedoch gibt es einige Unterschiede.
                 Mit CHAR kann eine fixe Grösse vergeben werden (in Bytes) was zu einem Problem führen könnte, wenn man
                 nicht weiss,
@@ -341,7 +344,7 @@
 
 
 
-
+        <hr id="hr-1">
 
 
 
@@ -881,11 +884,61 @@
 
         <div class="mathematische">
             <h3>Mathematische Funktionen</h3>
-            <p>Mit den mathematischen Funktionen sind zum Beispiel Operatoren (*,+,-,:) gemeint. Ein weiteres 
-                Beispiel wäre das runden der Resultate (round). 
+            <p>Mit den mathematischen Funktionen sind zum Beispiel Operatoren (*,+,-,:) gemeint. Ein weiteres
+                Beispiel wäre das runden der Resultate (round).
             </p>
-            <h4></h4>
+            <h4>Round</h4>
+            <p>Mit "Round" können Datensätze auf verschiedene Stellen nach dem Komma gerundet werden. Diese Funktion
+                wäre zum Beispiel sehr hilfreich,
+                wenn man viele Produkte hätte, welche ungefähr gleich kosten. Somit kann man alle auf die gleiche
+                Stelle runden, sodass man genau weiss,welche
+                Produkte in jenem Bereich des Preises gehören.
+            </p>
+
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p>
+                    <span class="eins">select</span> <span class="zwei">round</span>
+                    <span class="vier">(135.375, 2);</span>
+                </p>
+                <p>Erklärung:</p>
+                <p>In diesem Beispiel wird die Zahl "135.375" auf zwei Stellen nach dem Komma gerundet.</p>
+
+
+            </div>
+            <p>Veranschaulichung:</p>
+            <img src="bilder/select_round.PNG" alt="Mit ROUND runden" id="img-groupby-beispiel" />
         </div>
+
+        <div class="aggregatfunktionen">
+            <h3>Aggregat Funktionen</h3>
+            <p>Mit Aggregat Funktion ist zum Beispiel "count" gemeint. Damit kann die Anzahl einer Spalte oder die
+                Anzahl der Datensätze
+                innerhalb der ganzen Tabelle herausgefunden werden.
+            </p>
+            <div class="gruppieren-bsp">
+                <p>Beispiel:</p>
+                <p>
+                    <span class="eins">select</span> <span class="zwei">count(id)</span>
+                    <span class="vier">from customers;</span>
+                </p>
+
+                <p>Erklärung:</p>
+                <p>Mit "count" sagt man, dass alle Datensätze innerhalb der Spalte ("id") aus der Tabelle "customers" gezählt 
+                    werden sollen.
+                </p>
+
+            </div>
+            <p>Veranschaulichung:</p>
+            <img src="bilder/select_count.PNG" alt="COUNT Funktion" id="img-groupby-beispiel"/>
+        </div>
+
+        <div class="funkionen-rest">
+            <p>Alle Weiteren Informationen zum diesem Kapitel sind auf folgenden Links zu finden:</p>
+            <a href="https://dev.mysql.com/doc/refman/8.0/en/functions.html"><button class="dropbtn-1">mysql.com</button></a>
+            <a href="https://www.w3schools.com/sql/sql_ref_mysql.asp"><button class="dropbtn-2">w3schools.com</button></a>
+        </div>
+
 
 
     </main>
@@ -921,14 +974,6 @@
 
     </footer>
 
-    <a class="scroll-link" href="#footer-titel">
-        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
-            <g fill="none" fill-rule="evenodd">
-                <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
-                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
-            </g>
-        </svg>
-    </a>
 
 </body>
 
