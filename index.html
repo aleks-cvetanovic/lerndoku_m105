@@ -29,7 +29,7 @@
                 <div id="myDropdown" class="dropdown-content">
                     <a href="#was-ist-sql">Kleine Erklärung zu SQL</a>
                     <a href="#">Relationale Datenbanken</a>
-                    <a href="#modellieren">Modelieren</a>
+                    <a href="#modelieren">Modelieren</a>
                     <a href="#">Normalisieren</a>
                     <a href="#">Datentypen</a>
                     <a href="#">Data Definition Language</a>
@@ -580,7 +580,7 @@
         <hr id="hr-1">
 
 
-        <!-- DATA MANIPULATION LANGUAGE -->
+        <!-- DATA MANIPULATION LANGUAGE !-->
 
         <div class="dml-abschnitt">
             <h1>Data Manipulation Language (DML)</h1>
@@ -678,17 +678,18 @@
                 </p>
 
                 <p>
-                    <span class="eins">load data local infile</span> <span class="zwei">'/home/m105/Downloads/bulkload_musik.csv'</span>
+                    <span class="eins">load data local infile</span> <span class="zwei">'/home/m105/Downloads/bulkload_kunst.csv'</span>
                     <span class="fünf">into table</span>
                     <span class="vier">temporaer</span>
                     <span class="fünf">= fields terminated by</span> <span class="sechs">';';</span>
                 </p>
 
                 <p>
-                    <span class="eins">insert into</span> <span class="zwei">tblGenre</span>
-                    <span class="fünf">(Genre)</span>
+                    <span class="eins">insert into</span> <span class="zwei">kunst</span>
+                    <span class="fünf">(kuenstler)</span>
                     <span class="vier">select distinct</span>
-                    <span class="fünf">Genre</span> <span class="sechs">from temporaer;</span>
+                    <span class="fünf">kuenstler</span> <span class="sechs">from temporaer;</span>
+
                 </p>
             </div>
 
@@ -817,10 +818,17 @@
         </div>
 
         <div class="Funktionen/Operatoren">
-            <p></p>
+            <h1>Funktionen/Operatoren</h1>
+            <p>Die Funktionen werden am häufigsten bei der Selektierung eingesetzt. Durch die Funktionen 
+                können Daten in einer anderen Ansicht angezeigt werden. Damit ist zum Beispiel das Zusammenfassen verschiedener 
+                Werte oder Spalten innerhalb einer Tabelle gemeint. Unter den Funktionen gibt es verschiedenartige, darunter zum Beispiel mathematische.
+            </p>
         </div>
 
-
+        <div class="mathematische">
+            <h3>Mathematische Funktionen</h3>
+            <p>Um Spalten </p>
+        </div>
 
 
     </main>

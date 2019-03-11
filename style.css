@@ -13,7 +13,7 @@ body {
     text-decoration: none;
     display:none;
     position:absolute;
-    border-color: solid rgb(111, 198, 219) 3px;
+    border-color: solid rgb(101, 153, 168) 3px;
 
 }
 
@@ -25,10 +25,7 @@ body {
 
 }
 
-.dropdown-content a:hover {
-    background-color: rgba(111,198,219,0,5);
 
-}
 
 .dropdown-content:hover {
     background-color: rgba(111,198,219,0,5);
@@ -36,27 +33,24 @@ body {
 }
 
 .dropdown {
-    border-color:rgb(111, 198, 219);
+    border-color:rgb(101, 153, 168);
     transition: background-color 1s;
     color: black;
-    font-weight: bold;
     right:20px;
 }
 
-.dropdown:hover .dropbtn {
-    display:block;
-}
 
-.dropbtn:focus .dropdown {
+.dropdown:hover .dropdown-content {
     display:block;
-    right:30px;
-    margin-top:80px;
+    position:fixed;
+    right:0px;
+    margin-top:70px;
     border: solid rgb(152, 200, 214) 3px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px; 
     border-bottom-right-radius: 30px;
-    background-color: rgb(111, 198, 219);
+    background-color: rgb(152, 200, 214);
     padding:10px 30px 10px 30px;
     box-shadow: 0px 0px 50px rgb(101, 153, 168);
 
