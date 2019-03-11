@@ -27,8 +27,10 @@ body {
 
 
 
-.dropdown-content:hover {
-    background-color: rgba(111,198,219,0,5);
+.dropdown-content a:hover {
+    background-color:rgb(182, 227, 241);
+    border-radius:15px 15px 15px 15px;
+    width:100%;
 
 }
 
@@ -75,6 +77,7 @@ body {
 .downloadbtn:hover {
     background-color: rgb(152, 200, 214);
     box-shadow: 0px 0px 50px rgb(101, 153, 168);
+    cursor: pointer;
 
 }
 
@@ -143,10 +146,8 @@ header {
 
 main {
     padding-bottom: 3cm;
-    margin-left: 180px;
-    margin-right: 180px;
-    padding-left: 300px;
-    padding-right: 300px;
+    margin-left: 210px;
+    margin-right: 210px;
     border:solid rgb(152, 200, 214) 10px;
     box-shadow: 0px 10px 80px 15px rgb(152, 200, 214); ;
     background-color: rgb(152, 200, 214);
@@ -157,12 +158,13 @@ main {
 }
 
 #hr-1 { 
-    border:solid rgb(38, 119, 199) 3px;
+    border:solid rgb(139, 173, 197) 3px;
     border-radius:10px 10px 10px 10px;
-    margin-top:50px;
-    margin-bottom:auto;
-    width:1000px;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    width:100%;
 }
+
 
 #relationale-datenbanken {
     text-align:center;
@@ -202,6 +204,14 @@ footer {
     margin:0 auto;
 }
 
+
+#char-varchar {
+    width:700px;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+
 #img-innerjoin {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -237,6 +247,8 @@ footer {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    display:flex;
+    justify-content: center;
 }
 
 .img-grant {
@@ -244,6 +256,7 @@ footer {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    margin: auto;
 
 }
 
@@ -298,6 +311,8 @@ footer {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    margin-left:0px;
+    margin-right: 200px;
 
 }
 
@@ -308,6 +323,16 @@ footer {
     border-bottom-right-radius: 15px;
     width: 550px;
 
+}
+
+img {
+    display:flex;
+    justify-content: center;
+}
+
+.tg {
+    margin:0 auto;
+    width:800px;
 }
 
 .update-set {
@@ -524,6 +549,7 @@ footer {
 
 }
 
+
 .kontaktinfos-content p {
     margin: 7px;
 }
@@ -548,23 +574,28 @@ footer {
     margin-left:30px;
 }
 
-main div, h1 {
-    width: 600px;
-    margin:0 auto;
+main div,h1  {
     text-align: center;
+    margin:0 auto;
+}
+
+main div {
+    width:600px;
+}
+
+main img {
+margin:0 auto;
+text-align: center;
 }
 
 h1 {
-    margin-top:8cm;
+    margin-bottom: 40px;
 }
 
 h3 {
-    margin-top: 4cm;
+    margin-top: 200px;
 }
 
-#sql-modellieren {
-    text-align: center;
-}
 
 .modellieren {
     background-color: rgb(152, 191, 218);
@@ -605,7 +636,8 @@ border-radius:30px;
 }
 
 #img-same {
-    margin:0 auto;
+    margin-left: auto;
+    margin-right: auto;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -683,13 +715,7 @@ border-radius:30px;
 }
 
 
-@media (min-width: 600px) {
-    main {
-        max-width: 0 12.5% 1% 12.5%;
-    }
-}
-
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-radius: 20px 20px 20px 20px;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg .tg-r2sj{font-size:16px;background-color:#98bfda;border-color:inherit;text-align:left;vertical-align:top}

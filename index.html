@@ -58,8 +58,24 @@
             </p>
 
         </div>
+
         <p id="datenbanksystem"></p>
         <hr id="hr-1">
+
+        <div class="mysql-dienst">
+            <div class="mysql-installieren">
+                <h1>MYSQL-Dienst und MYSQL Client Tool installieren</h1>
+            </div>
+            <div class="gruppieren-bsp">
+                Folgender Befehl muss genutzt werden:
+                <p><b>sudo apt-get install mysql-server mysql-client</b></p>
+            </div>
+            <p>Die Installation muss mit "Y" für Yes (oder "J" für Ja) bestätigt werden.</p>
+        </div>
+
+        <hr id="hr-1">
+
+
         <h1 id="relationale-datenbanken">Relationale Datenbanken</h1>
         <div class="r-d-abschnitt">
             <p>
@@ -79,7 +95,9 @@
         <div class="m-abschnitt">
             <p> Ein Datenbank-Modell ist für die Strukturierung einer Datenbank zuständig. Durch diese Strukturierung
                 kann man die Verknüpfungen der Tabellen sowie die Verbindungen zwischen den Daten übersichtlicher
-                darstellen. Um dies tun zu können, werden Tabellen
+                darstellen. Der Hauptnutzen einer relationalen Datenbank ist die Vermeidung doppelter Einträge sowie
+                Enferunung unnötiger Spalten.
+                Um dies tun zu können, werden Tabellen
                 genutzt.Das Endresultat dieses Vorgangs wird "Relationale Datenbank" genannt.
             </p>
             <img src="bilder/sql-modellieren.png" id="sql-modellieren" />
@@ -296,11 +314,30 @@
             </tr>
         </table>
 
+        <hr id="hr-1">
+
         <div class="char-vs-varchar">
             <h3>CHAR vs VARCHAR</h3>
-            <p></p>
+            <p>CHAR und VARCHAR wirken auf den ersten Blick identisch. Jedoch gibt es einige Unterschiede.
+                Mit CHAR kann eine fixe Grösse vergeben werden (in Bytes) was zu einem Problem führen könnte, wenn man
+                nicht weiss,
+                wieviel Platz der Datensatz brauchen wird. Der Vorteil aber besteht darin, dass sobald man weiss,
+                wieviel Platz man braucht,
+                die gebrauchte Grösse genau angegeben werden kann.
+                <br />
+                Bei VARCHAR wird eine Grösse bestummen, jedoch wird hier nicht die ganze Grösse genutzt, sondern das,
+                was im Datensatz enthalten ist.
+                Zusätzlich reserviert VARCHAR immer zwei Bytes für sich.
+            </p>
+            <p>Kurz Zusammengefasst:
+                <br />
+                <b>CHAR hat eine feste Länge, VARCHAR ist ein Datentyp mit variabler Länge.</b>
+            </p>
+
+            <p>Veranschaulichung:</p>
+            <img src="bilder/char_vs_varchar.png" alt="CHAR vs VARCHAR" id="char-varchar" />
         </div>
-        <hr id="hr-1">
+
 
 
 
@@ -382,7 +419,7 @@
 
 
         <div class="ddl4-abschnitt">
-            <h3>Ändern von Tabellen</h3>
+            <h3>Ändern von Tabellen (add,drop,change)</h3>
             <p>
                 Eine Tabelle ändert man mit dem Befehl "alter table". Sobald dies eingegeben wurde, folgen Tabellenname
                 und Funktion danach. Mit "add" kann zum Beispiel ein Datensatz oder eine Spalte hinzugefügt werden.
@@ -545,6 +582,7 @@
                     <span class="acht">sum(quantity)</span> <span class="neun">>= 70;</span>
                 </p>
             </div>
+            <p>Veranschaulichung:</p>
             <img id="img-groupby-beispiel" src="bilder/group_by_beispiel.gif" />
         </div>
 
@@ -563,15 +601,16 @@
             <br />
             <div class="having-bsp">
                 <p>Beispiel:</p>
-                <p>SELECT Ort,
-                    COUNT(*) AS Anzahl
-                    FROM Abteilung
-                    GROUP BY Ort
-                    HAVING COUNT(*) = 1
-                    ORDER BY Ort;
+                <p>
+                    <span class="eins">select Ort,count (*)</span> <span class="zwei">as Anzahl</span> <span class="drei">from
+                        Abteilung</span>
+                    <span class="vier">group by Ort</span>
+                    <span class="fünf">having count (*) = 1</span> <span class="sechs">order by Ort;</span>
 
                 </p>
+
             </div>
+            <p>Veranschaulichung:</p>
         </div>
 
 
@@ -715,7 +754,7 @@
 
 
         <div class="joins">
-            <h3>JOINs</h3>
+            <h1>JOINs</h1>
             <p>Der Join dient der Zusammenführung von zwei Tabellen unter bestimmten Kriterien. Durch verschiedene
                 Arten von Joins
                 werden dabei zusätzlich zu den eigentlichen Kriterien noch Grundlagen für die Ergebnismenge festgelegt.
@@ -829,7 +868,7 @@
             <p>Veranschaulichung:</p>
             <img src="bilder/fullouter_join.PNG" alt="Full Outer Join" id="img-drop-database" />
         </div>
-
+        <hr id="hr-1">
         <div class="Funktionen/Operatoren">
             <h1>Funktionen/Operatoren</h1>
             <p>Die Funktionen werden am häufigsten bei der Selektierung eingesetzt. Durch die Funktionen
@@ -842,7 +881,10 @@
 
         <div class="mathematische">
             <h3>Mathematische Funktionen</h3>
-            <p>Um Spalten </p>
+            <p>Mit den mathematischen Funktionen sind zum Beispiel Operatoren (*,+,-,:) gemeint. Ein weiteres 
+                Beispiel wäre das runden der Resultate (round). 
+            </p>
+            <h4></h4>
         </div>
 
 
@@ -866,13 +908,7 @@
 
         <div class="links">
             <h3 id="links-titel"><u>Nützliche externe Webseiten</u></h3>
-
-            <form action="
-                https://github.com/aleks-cvetanovic/lerndoku_m105/tree/master/extern_n%C3%BCtzliche_webseiten">
-                <input type="submit" value="Download" class="downloadbtn" />
-            </form>
-
-
+            <a href="extern_nützliche_webseiten.zip"><button class="downloadbtn">Download</button></a>
         </div>
 
 
